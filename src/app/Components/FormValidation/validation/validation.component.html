@@ -1,0 +1,17 @@
+<h1 class="text-center p-3">Form Validation</h1>
+<form class="form form-group text-white" [formGroup]="myRegForm" >
+  <div class="d-flex w-50 m-auto my-4">
+    <label class="w-25 fw-medium fs-4" for="name">User Name</label>
+  <input #name type="text" id="name" class="form-control w-75 fw-medium fs-4" formControlName="name" >
+  </div>
+
+  <div class="d-flex w-50 m-auto my-4">
+    <label class="w-25 fw-medium fs-4" for="age">User Age</label>
+  <input #age type="number" id="age" class="form-control w-75 fw-medium fs-4" formControlName="age" >
+  </div>
+
+  <div class="btn-elem w-25 m-auto my-4">
+    <input (click) ="getData(name.value , age.value)" type="submit" value="Add User" class="btn btn-primary  w-75" >
+  </div>
+
+</form>

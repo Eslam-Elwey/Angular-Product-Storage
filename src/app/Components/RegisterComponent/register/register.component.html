@@ -1,0 +1,40 @@
+<h1 class="text-center p-3 my-3">Register Form</h1>
+<div class="form-sec">
+  <div class="mb-3 w-50 m-auto fs-4">
+    <label for="UName" class="form-label">User Name</label>
+    <input type="text" class="form-control fw-medium fs-4 px-3" id="UName" [(ngModel)] = "name">
+    @if(name&&!nameStatus)
+    {
+      <p class="text-danger my-2">Invalid Name</p>
+    }
+    @else if (nameStatus) {
+      <p class="text-success my-2">Valid Name</p>
+    }
+    @else {
+
+    }
+
+
+  </div>
+  <div class="mb-3 w-50 m-auto fs-4">
+    <label for="UAge" class="form-label">User Age</label>
+    <input type="number" class="form-control fw-medium fs-4 px-3" id="UAge" [(ngModel)] = "age">
+
+    @if(age&&!ageStatus)
+    {
+      <p class="text-danger my-2">Invalid Age</p>
+    }
+    @else if (ageStatus) {
+      <p class="text-success my-2">Valid Age</p>
+    }
+    @else {
+
+    }
+
+
+  </div>
+  <div class="button-sec w-25 m-auto my-5">
+    <button type="submit" class="btn btn-primary w-100 fs-4 fw-medium" (click) = "SendData()">Add User</button>
+  </div>
+
+</div>

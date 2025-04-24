@@ -1,0 +1,20 @@
+<h1 class="text-center my-3">All Students</h1>
+<table class="all-students table table-striped table-bordered border-info text-center fw-medium fs-5 w-75 m-auto my-4 ">
+  <thead class="fw-bold fs-4">
+    <tr class="p-2">
+      <th class="w-50">Name</th>
+      <th class="w-50">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      @for (student of allStudentsData; track student.id) {
+        <tr class="p-2">
+          <td class="w-50">{{student.name}}</td>
+          <td class="w-50">{{student.age}}</td>
+        </tr>
+      }
+
+
+  </tbody>
+</table>
